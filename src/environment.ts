@@ -1,5 +1,5 @@
 export default {
   api: {
-    baseUrl: "https://swapi.dev/api/",
+    baseUrl: 'https://swapi.dev/api/',
   },
 };

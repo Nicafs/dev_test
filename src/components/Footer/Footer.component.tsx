@@ -1,16 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { Box } from "@mui/system";
-import { Hidden } from "@mui/material";
+import { Hidden } from '@mui/material';
+import { Box } from '@mui/system';
 
-import "./footer.styles.scss";
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+
+import './footer.styles.scss';
 
 export const Footer: React.FC = () => (
   <footer className="footer">
     {/* Título */}
     <Hidden smUp>
-      <Logo className="logo" style={{ width: "200px" }} />
+      <Logo className="logo" style={{ width: '200px' }} />
 
       <Box display="flex" flexDirection="column" className="txt-center">
         <span> Teste Deveopness </span>

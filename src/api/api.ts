@@ -1,15 +1,15 @@
-import axios from "axios";
+import axios from 'axios';
 
-import env from "../environment";
+import env from '../environment';
 
 const api = axios.create({
   baseURL: env.api.baseUrl,
   headers: {
-    "Content-Type": "application/json",
+    'Content-Type': 'application/json',
   },
 });
 
-api.interceptors.request.use(async (config) => {
+api.interceptors.request.use(async config => {
   return config;
 });
 

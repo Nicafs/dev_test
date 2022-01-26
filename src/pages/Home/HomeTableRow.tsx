@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import NumberFormat from 'react-number-format';
 
-import NumberFormat from "react-number-format";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Box from '@mui/material/Box';
+import Collapse from '@mui/material/Collapse';
+import IconButton from '@mui/material/IconButton';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableHead from '@mui/material/TableHead';
+import Typography from '@mui/material/Typography';
 
-import Box from "@mui/material/Box";
-import Collapse from "@mui/material/Collapse";
-import IconButton from "@mui/material/IconButton";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableHead from "@mui/material/TableHead";
-import Typography from "@mui/material/Typography";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-
-import { IStarships } from "../../types";
-import { StyledTableRow, StyledTableCell } from "./styles";
+import { IStarships } from '../../types';
+import { StyledTableRow, StyledTableCell } from './styles';
 
 export type THomeTableRow = {
   row: IStarships;
@@ -31,12 +30,12 @@ export const HomeTableRow: React.FC<THomeTableRow> = ({
   const { consumables, MGLT } = rowDetails;
   let days = 0;
 
-  if (consumables.includes("month")) days = 30;
-  if (consumables.includes("week")) days = 7;
-  if (consumables.includes("day")) days = 1;
-  if (consumables.includes("year")) days = 365;
+  if (consumables.includes('month')) days = 30;
+  if (consumables.includes('week')) days = 7;
+  if (consumables.includes('day')) days = 1;
+  if (consumables.includes('year')) days = 365;
 
-  const howMany = Number(consumables.replace(/\D/g, ""));
+  const howMany = Number(consumables.replace(/\D/g, ''));
   const MGLTPerDay = Number(MGLT) * 24;
   const totalDays = days * howMany;
   const totalWithoutStop = MGLTPerDay * totalDays;
@@ -44,7 +43,7 @@ export const HomeTableRow: React.FC<THomeTableRow> = ({
 
   return (
     <>
-      <StyledTableRow sx={{ "& > *": { borderBottom: "unset" } }}>
+      <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
         <StyledTableCell>
           <IconButton
             aria-label="expand row"
@@ -96,7 +95,7 @@ export const HomeTableRow: React.FC<THomeTableRow> = ({
                     <StyledTableCell align="center">
                       <NumberFormat
                         value={rowDetails.cargo_capacity}
-                        displayType={"text"}
+                        displayType={'text'}
                         thousandSeparator={true}
                       />
                     </StyledTableCell>
@@ -106,9 +105,9 @@ export const HomeTableRow: React.FC<THomeTableRow> = ({
                     <StyledTableCell align="center">
                       <NumberFormat
                         value={rowDetails.cost_in_credits}
-                        displayType={"text"}
+                        displayType={'text'}
                         thousandSeparator={true}
-                        prefix={"$$"}
+                        prefix={'$$'}
                       />
                     </StyledTableCell>
                     <StyledTableCell align="center">
@@ -128,7 +127,7 @@ export const HomeTableRow: React.FC<THomeTableRow> = ({
 
                     <StyledTableCell
                       align="center"
-                      style={{ textTransform: "capitalize" }}
+                      style={{ textTransform: 'capitalize' }}
                     >
                       {rowDetails.starship_class}
                     </StyledTableCell>

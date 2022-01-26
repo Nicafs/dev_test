@@ -1,13 +1,11 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-import "./App.css";
+import './App.css';
 
-import { history } from "./helpers/history";
-import Routes from "./routes";
-
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import Routes from './routes';
 
 const App = () => {
   return (
@@ -16,7 +14,7 @@ const App = () => {
         <Header />
 
         <div className="main-container">
-          <Routes history={history} />
+          <Routes />
         </div>
 
         <Footer />

@@ -1,10 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Box } from "@mui/system";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { Box } from '@mui/system';
 
-import "./header.styles.scss";
+import { ReactComponent as Logo } from '../../assets/logo.svg';
+
+import './header.styles.scss';
 
 export const Header: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export const Header: React.FC = () => {
       >
         <div className="sistema-container">
           <Link className="logo-container" to="/">
-            <Logo className="logo" style={{ width: "100%", height: "100%" }} />
+            <Logo className="logo" style={{ width: '100%', height: '100%' }} />
           </Link>
 
           <h1>Sistema de Teste</h1>

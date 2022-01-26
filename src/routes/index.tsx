@@ -1,15 +1,11 @@
-import React, { lazy } from "react";
-import { Redirect, Switch } from "react-router-dom";
+import React, { lazy } from 'react';
+import { Redirect, Switch } from 'react-router-dom';
 
-import Route from "./Route";
+import Route from './Route';
 
-const Home = lazy(() => import("../pages/Home/Home"));
+const Home = lazy(() => import('../pages/Home/Home'));
 
-interface IRoutes {
-  history: any;
-}
-
-const Routes: React.FC<IRoutes> = ({ history }) => {
+const Routes: React.FC = () => {
   return (
     <Switch>
       <Route path="/" exact>

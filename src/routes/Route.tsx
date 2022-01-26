@@ -1,5 +1,5 @@
-import React, { Suspense } from "react";
-import { Route as RouteDom } from "react-router-dom";
+import React, { Suspense } from 'react';
+import { Route as RouteDom } from 'react-router-dom';
 
 interface IRoute {
   path: string;
